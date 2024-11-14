@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Find even and odd sums in an array
+        const array = [23, 54, 67, 64, 46, 95, 98];
+        let oddSumArray = 0;
+        let evenSumArray = 0;
+
+        for (let num of array) {
+            if (num % 2 === 0) {
+                evenSumArray += num;
+            } else {
+                oddSumArray += num;
+            }
+        }
+
+        console.log("Odd sum in array:", oddSumArray);
+        console.log("Even sum in array:", evenSumArray);
+
+        //Find even and odd sums in a string
+        const a = "234546937";
+        let oddSumString = 0;
+        let evenSumString = 0;
+
+        for (let char of a) {
+            const num = parseInt(char);
+            if (num % 2 === 0) {
+                evenSumString += num;
+            } else {
+                oddSumString += num;
+            }
+        }
+
+        console.log("Odd sum in string:", oddSumString);
+        console.log("Even sum in string:", evenSumString);
+
+        //Print tables from 1 to 10 using nested loops, break, and continue
+        for (let i = 1; i <= 10; i++) {
+            console.log(`Table of ${i}:`);
+            for (let j = 1; j <= 10; j++) {
+                if (j === 6) continue;
+                console.log(`${i} x ${j} = ${i * j}`);
+            }
+            console.log("");
+        }
+
+    </script>
+</body>
+</html>
